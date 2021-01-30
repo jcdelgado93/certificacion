@@ -77,9 +77,12 @@ class BookDetailsFragment : Fragment() {
 
             intent.type = "plain/text"
 
-            val dir = "anchorbooks@gmail.com"
-            val subject = "Compra de libros"
-            val message = "Compra del libro: ${book.title}"
+            val dir = "ventas@anchorBooks.cl"
+            val subject = "Consulta por libro: ${book.title} - id: ${book.id}"
+            val message = "Hola\n" +
+                    "Vi el libro: ${book.title} de código: ${book.id} y me gustaría que me contactaran a este correo o al\n" +
+                    "siguiente número _________\n" +
+                    "Quedo atento."
 
             intent.putExtra(Intent.EXTRA_EMAIL, dir)
             intent.putExtra(Intent.EXTRA_SUBJECT, subject)
