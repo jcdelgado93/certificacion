@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Certificacion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="portada_del_libro">Portada del libro</string>
+    <string name="comprar_libro">Comprar libro</string>
+    <string name="sinopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis sagittis eros, sit amet suscipit orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin commodo ultrices turpis, feugiat laoreet lacus sollicitudin quis. Aliquam bibendum auctor libero sodales ullamcorper.
+
+        Aenean rhoncus massa ac libero vehicula pellentesque. Donec nec sodales leo. Sed elit ante, sodales eget facilisis in, rhoncus id augue. Donec semper, eros interdum egestas accumsan, augue ligula pulvinar turpis, id sodales ante nisi in turpis. Aliquam cursus magna eros, vel lacinia turpis pretium at. Pellentesque vel nibh sed ante sollicitudin hendrerit. Aliquam erat volutpat. Duis in urna a ipsum bibendum tempor. Etiam malesuada neque augue, nec feugiat velit pellentesque eget. Phasellus in nibh tincidunt, faucibus turpis sed, lacinia mauris. Nunc vitae mi ut massa lacinia gravida.</string>
+</resources>
