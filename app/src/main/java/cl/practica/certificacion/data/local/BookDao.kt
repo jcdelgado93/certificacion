@@ -11,13 +11,13 @@ import cl.practica.certificacion.data.entities.Book
 interface BookDao {
 
     @Query("SELECT * FROM books")
-    fun getAllBooks() : LiveData<List<Book>>
+    fun getAllBooks(): LiveData<List<Book>>
 
     @Query("SELECT * FROM books WHERE id = :id")
     fun getBookDetails(id: Int): LiveData<Book>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(books: List<Book>)
+    suspend fun insertAll(book: List<Book>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(book: Book)
