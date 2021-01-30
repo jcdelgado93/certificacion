@@ -1,6 +1,7 @@
 package cl.practica.certificacion.ui.bookdetails
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -71,5 +72,19 @@ class BookDetailsFragment : Fragment() {
         binding.tvAnio.text = "Año: ${book.year}"
         binding.tvPaginas.text = "Nro de paginas: ${book.pages}"
         binding.tvPrecio.text = "Precio: CLP ${book.price}"
+        binding.btnComprar.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+
+            intent.type = "plain/text"
+
+            val dir = "anchorbooks@gmail.com"
+            val subject = "Compra de libros"
+            val message = "Compra del libro: ${book.title}"
+
+            intent.putExtra(Intent.EXTRA_EMAIL, dir)
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject)
+            intent.putExtra(Intent.EXTRA_TEXT, message)
+            startActivity(Intent.createChooser(intent, "Elija una aplicacion"))
+        }
     }
 }
