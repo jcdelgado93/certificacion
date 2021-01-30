@@ -1,5 +1,6 @@
 package cl.practica.certificacion.ui.bookdetails
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -58,16 +59,17 @@ class BookDetailsFragment : Fragment() {
         })
     }
 
+    @SuppressLint("SetTextI18n")
     private fun bindBook(book: Book) {
         Glide.with(binding.ivCaratula)
             .load(book.imageLink)
             .into(binding.ivCaratula)
         binding.tvTitulo.text = book.title
-        binding.tvAutor.text = book.author
-        binding.tvIdioma.text = book.language
-        binding.tvPais.text = book.country
-        binding.tvAnio.text = book.year.toString()
-        binding.tvPaginas.text = book.pages.toString()
-        binding.tvPrecio.text = book.price.toString()
+        binding.tvAutor.text = "Autor: ${book.author}"
+        binding.tvIdioma.text = "Idioma: ${book.language}"
+        binding.tvPais.text = "País: ${book.country}"
+        binding.tvAnio.text = "Año: ${book.year}"
+        binding.tvPaginas.text = "Nro de paginas: ${book.pages}"
+        binding.tvPrecio.text = "Precio: CLP ${book.price}"
     }
 }

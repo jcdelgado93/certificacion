@@ -19,6 +19,6 @@ class BookRepository @Inject constructor(
     fun getBooks() = performGetOperation(
         databaseQuery = { localDataSource.getAllBooks() },
         networkCall = { remoteDataSource.getAllBooks() },
-        saveCallResult = { localDataSource.insertAll(it.bookList) }
+        saveCallResult = { localDataSource.insertAll(it) }
     )
 }

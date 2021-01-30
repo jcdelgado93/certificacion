@@ -41,9 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp10"
-            android:textColor="@color/colorSecondaryText"
+            android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/sp12"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/iv_caratula"
             app:layout_constraintStart_toEndOf="@id/iv_caratula"
             tools:text="@tools:sample/lorem" />
